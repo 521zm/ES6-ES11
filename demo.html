@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      border: 1px solid red;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+  <script>
+    const lis = document.getElementsByTagName('li'); {
+      let index = 0
+      lis[index].onclick = function () {
+        // lis[index].style.background = 'pink'
+        console.log(index);
+      }
+    } {
+      let index = 1
+      lis[index].onclick = function () {
+        lis[index].style.background = 'pink'
+      }
+    } {
+      let index = 2
+      lis[index].onclick = function () {
+        lis[index].style.background = 'pink'
+      }
+    }
+    console.log(window);
+  </script>
+</body>
+
+</html>
