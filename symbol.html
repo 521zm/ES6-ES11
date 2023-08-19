@@ -1,0 +1,10 @@
+<script>
+  const s = Symbol()
+  // console.log(s, typeof s);
+  const s1 = Symbol('zhangsan')
+  const s2 = Symbol('zhangsan')
+  console.log(s1 === s2);
+  const s3 = Symbol.for('zhangsan')
+  const s4 = Symbol.for('zhangsan')
+  console.log(s3 === s4);
+</script>

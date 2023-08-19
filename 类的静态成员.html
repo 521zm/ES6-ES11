@@ -1,0 +1,25 @@
+<script>
+  //静态成员是属于构造函数以及类的而不属于实例化对象
+  function PP() {
+
+  }
+  //这些都是静态成员
+  // PP.name = 'PIAOAPIAO'
+  // PP.dance = function () {
+  //   console.log('i can dance');
+  // }
+  PP.prototype.name = 'PIAOPIAO'
+  PP.prototype.dance = function () {
+    console.log('i can dance');
+  }
+  const P = new PP()
+  console.log(P.name);
+  class ZM {
+    static name = 'ZM'
+    static dance() {
+      console.log('i can dance');
+    }
+  }
+  const Z = new ZM()
+  console.log(Z.name); //undefined
+</script>

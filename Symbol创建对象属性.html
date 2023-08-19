@@ -1,0 +1,22 @@
+<script>
+  const obj = {
+    name: 'zmzm',
+    age: '18',
+    dance: function () {
+      console.log('am can dance');
+    },
+    up: function () {
+
+    },
+    [Symbol('say')]: function () {
+      console.log('i can say');
+    },
+    [Symbol('speak')]: function () {
+      console.log('i can speak');
+    }
+  }
+  obj.up = function () {
+    console.log('am can shangsheng');
+  }
+  console.log(obj);
+</script>

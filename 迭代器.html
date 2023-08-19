@@ -1,0 +1,59 @@
+<script>
+  const xiyouji = ['唐僧', '沙和尚', '猪八戒', '孙悟空']
+  for (const k in xiyouji) {
+    console.log(xiyouji[k]);
+  }
+  for (const v of xiyouji) {
+    console.log(v);
+  }
+  xiyouji.forEach(function (e, i) {
+    console.log(`index:${i},element:${e}`);
+  })
+  const iterator = xiyouji[Symbol.iterator]()
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  console.log(iterator.next());
+  // console.log(xiyouji);
+  const zmzmzm = {
+    name: 'am',
+    food: ['1', '2', '3', '4'],
+    [Symbol.iterator]() {
+      let index = 0
+      return {
+        next: () => {
+          if (index < this.food.length) {
+            const result = {
+              value: this.food[index],
+              done: false
+            };
+            index++
+            return result;
+          } else {
+            return {
+              value: undefined,
+              done: true
+            }
+          }
+        }
+      }
+    }
+  }
+  for (const iterator of zmzmzm) {
+    console.log(iterator);
+  }
+  // const jijibo = {
+  //   name: 'zm',
+  //   age: '18',
+  //   a: () => {
+  //     return {
+  //       b: (function () {
+  //         console.log(this);
+  //       })()
+  //     }
+  //   }
+  // }
+  // console.log(jijibo);
+  // jijibo.a()
+</script>

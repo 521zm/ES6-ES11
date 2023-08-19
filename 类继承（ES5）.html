@@ -1,0 +1,26 @@
+<script>
+  //ES5中构造函数的继承
+  function Phone(brand, price) {
+    this.brand = brand
+    this.price = price
+  }
+  Phone.prototype.call = function () {
+    console.log('i can call');
+  }
+
+  function SmartPhone(brand, price, color, size) {
+    Phone.call(this, brand, price)
+    this.color = color
+    this.size = size
+  }
+  SmartPhone.prototype = new Phone()
+  SmartPhone.prototype.photo = function () {
+    console.log('i can photo');
+  }
+  SmartPhone.prototype.play = function () {
+    console.log('i can play');
+  }
+  SmartPhone.prototype.constructor = SmartPhone
+  const chuizi = new SmartPhone('锤子', 20000, 'black', '100px')
+  console.log(chuizi);
+</script>

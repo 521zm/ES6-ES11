@@ -1,0 +1,27 @@
+<script>
+  function* gen(arg) {
+    // console.log('11111');
+    // yield '一直没有耳朵！'
+    // console.log('22222');
+    // yield '一直没有尾巴！'
+    // console.log('33333');
+    // yield '真奇怪！'
+    // console.log('44444');
+    console.log(arg);
+    const one = yield '111'
+    console.log(one);
+    const two = yield '222'
+    console.log(two);
+    const three = yield '333'
+    console.log(three);
+  }
+  const iterator = gen('AAA')
+  console.log(iterator.next());
+  console.log(iterator.next('BBB'));
+  console.log(iterator.next('CCC'));
+  console.log(iterator.next('DDD'));
+  // console.log(iterator.next());
+  // for (const iterator of gen()) {
+  //   console.log(iterator);
+  // }
+</script>

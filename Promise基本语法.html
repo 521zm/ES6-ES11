@@ -1,0 +1,17 @@
+<script>
+  const p = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      //数据读取成功
+      // let data = '数据读取成功！'
+      // resolve(data)
+      //数据读取失败
+      let data = '数据读取失败！'
+      reject(data)
+    }, 1000)
+  })
+  p.then(function (value) {
+    console.log(value);
+  }, function (reason) {
+    console.log(reason);
+  })
+</script>

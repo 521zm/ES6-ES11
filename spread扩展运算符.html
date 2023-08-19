@@ -1,0 +1,14 @@
+<script>
+  const tfboys = ['王俊凯', '王源', '易烊千玺'];
+  const am = ['1', '2']
+
+  function lover() {
+    console.log(arguments);
+  }
+  lover(tfboys) //{ '0': [ '王俊凯', '王源', '易烊千玺' ] }
+  lover(...tfboys) // { '0': '王俊凯', '1': '王源', '2': '易烊千玺' }
+  console.log(...tfboys);
+  console.log(tfboys);
+  const hebin = tfboys.concat(...am)
+  console.log(...hebin);
+</script>

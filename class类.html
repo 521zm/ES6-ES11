@@ -1,0 +1,27 @@
+<script>
+  //ES5实例化对象
+  // function Phone(brand, price) {
+  //   this.brand = brand
+  //   this.price = price
+  // }
+  // Phone.prototype.call = function () {
+  //   console.log('i can call');
+  // }
+  // const PP = new Phone('pp', 10000)
+  // PP.call()
+  // console.log(PP);
+  //ES6对象
+  class Phone {
+    //构造方法 名字不可改
+    constructor(brand, price) {
+      this.brand = brand
+      this.price = price
+    }
+    // 只能这样写方法
+    call() {
+      console.log('i can call');
+    }
+  }
+  const PP = new Phone('PP', 10000)
+  console.log(PP);
+</script>

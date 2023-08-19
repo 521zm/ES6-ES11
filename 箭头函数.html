@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div">
+
+  </div>
+  <script>
+    const div = document.querySelector('.div')
+    div.addEventListener('click', function () {
+      console.log(this); //这里的this指向div
+      setTimeout(function () {
+        console.log(this); //这里的this指向window
+      }, 500)
+    })
+    // 普通函数谁调用this指向谁；
+    // 箭头函数this指向调用它的函数的上一级
+    const aa = {
+      name: 'pp',
+      getName1: function () {
+        console.log(this);
+        setTimeout(() => {
+          console.log(this);
+        }, 500);
+      }
+    }
+    aa.getName1()
+    let me = function (name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    console.log(new me('pp', '12'));
+  </script>
+</body>
+
+</html>

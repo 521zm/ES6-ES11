@@ -1,0 +1,68 @@
+<script>
+  //解决回调地狱
+  // function one() {
+  //   setTimeout(() => {
+  //     console.log(111);
+  //     iterator.next()
+  //   }, 1000)
+  // }
+
+  // function two() {
+  //   setTimeout(() => {
+  //     console.log(222);
+  //     iterator.next()
+  //   }, 2000)
+  // }
+
+  // function three() {
+  //   setTimeout(() => {
+  //     console.log(333);
+  //     iterator.next()
+  //   }, 3000)
+  // }
+
+  // function* gen() {
+  //   yield one()
+  //   yield two()
+  //   yield three()
+  // }
+  // const iterator = gen()
+  // iterator.next()
+  function getUsers() {
+    setTimeout(() => {
+      let data = '用户数据'
+      // console.log(data);
+      iterator.next(data)
+    }, 1000)
+  }
+
+  function getOrders() {
+    setTimeout(() => {
+      let data = '订单数据'
+      // console.log(data);
+      iterator.next(data)
+    }, 1000)
+  }
+
+  function getGoods() {
+    setTimeout(() => {
+      let data = '商品数据'
+      // console.log(data);
+      iterator.next(data)
+    }, 1000)
+  }
+
+  function* gen() {
+    // yield getUsers()
+    // yield getOrders()
+    // yield getGoods()
+    let users = yield getUsers()
+    console.log(users);
+    let orders = yield getOrders()
+    console.log(orders);
+    let goods = yield getGoods()
+    console.log(goods);
+  }
+  let iterator = gen()
+  iterator.next()
+</script>

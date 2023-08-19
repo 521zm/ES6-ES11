@@ -1,0 +1,19 @@
+<script>
+  function Person(name) {
+    this.name = name;
+    console.log(this);
+    this.sayHello = function () {
+      console.log(`Hello, ${this.name}!`);
+      console.log(this);
+    };
+    this.sayno = () => {
+      console.log(this);
+    }
+  }
+
+  const person1 = new Person('Bob');
+  // console.log(new Person(''));
+  person1.sayHello(); // 输出：Hello, Bob!
+  person1.sayno()
+  // 箭头函数在构造函数中，继承了构造函数的`this`
+</script>

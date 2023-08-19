@@ -1,0 +1,21 @@
+<script>
+  //二进制
+  console.log(0b1010);
+  //八进制
+  console.log(0o111);
+  //十六进制
+  console.log(0x111);
+  console.log(0.1 + 0.2 === 0.3); //false 
+  function equal(a, b) {
+    if (Math.abs(a - b) < Number.EPSILON) {
+      return true
+    } else {
+      return false
+    }
+  }
+  console.log(equal(0.1 + 0.2, 0.3));
+  //数值是否为有限数
+  console.log(Number.isFinite(100)); //true
+  console.log(Number.isFinite(100 / 0)); //false
+  console.log(Number.isFinite(Infinity)); //false
+</script>

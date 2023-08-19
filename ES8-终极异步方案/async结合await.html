@@ -1,0 +1,18 @@
+<script>
+  function t(m) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('hahaha');
+      }, m)
+    })
+  }
+  async function main() {
+    const result1 = await t(3000)
+    console.log(result1);
+    const result2 = await t(2000)
+    console.log(result2);
+    console.log('2222');
+    return '111'
+  }
+  console.log(main());
+</script>

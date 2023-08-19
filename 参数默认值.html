@@ -1,0 +1,24 @@
+<script>
+  function add(a, b, c = 10) {
+    return a + b + c
+  }
+  console.log(add(1, 2));
+
+  function connect({
+    host,
+    username,
+    password,
+    port
+  }) {
+    console.log(host);
+    console.log(username);
+    console.log(password);
+    console.log(port);
+  }
+  connect({
+    host: 'localhost',
+    username: 'root',
+    password: 'root',
+    port: '3306'
+  })
+</script>

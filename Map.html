@@ -1,0 +1,15 @@
+<script>
+  const m = new Map()
+  m.set('name', 'zm')
+  m.set('dance', function () {
+    console.log('i can dance');
+  })
+  const key = {
+    school: 'pp'
+  }
+  m.set(key, ['1', '2', '3'])
+  console.log(m);
+  for (const iterator of m) {
+    console.log(iterator);
+  }
+</script>

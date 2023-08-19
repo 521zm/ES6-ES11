@@ -1,0 +1,11 @@
+<script>
+  function add() {
+    console.log(arguments);
+  }
+  add('1', '2', '3') //结果为对象
+
+  function add01(...args) {
+    console.log(args);
+  }
+  add01('1', '2', '3') //结果为数组
+</script>

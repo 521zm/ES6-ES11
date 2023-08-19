@@ -1,0 +1,22 @@
+<script>
+  // const s = new Set()
+  // console.log(s, typeof s);
+  // const s1 = new Set(['1', '2', '3', '4'])
+  // console.log(s1);
+  // s1.add('5')
+  // console.log(s1.has('1'));
+  // s1.clear()
+  // for (const iterator of s1) {
+  //   console.log(iterator);
+  // }
+  console.log(...new Set(['1', '2', '2'])); //1 2
+  const s1 = [1, 2, 3, 4, 5, 6, 7, 7777]
+  const s2 = [3, 4, 5, 999, 3]
+  console.log(...s2);//3 4 5 999 3
+  //交集
+  const result = [...new Set(s1)].filter(item => new Set(s2).has(item))
+  console.log(result);
+  //并集
+  const union = [...new Set([...s1, ...s2])]
+  console.log(union);
+</script>

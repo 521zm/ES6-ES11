@@ -1,0 +1,73 @@
+<script>
+  const p = new Promise((resolve, reject) => {
+    resolve('1')
+  })
+  p.then(value => {
+    // console.log(value);
+    // return 'i love you'
+    // return new Promise((resolve, reject) => {
+    //   reject('ok')
+    // })
+    // throw new Error('chucuo')
+    console.log(value);
+    return new Promise((resolve, reject) => {
+      resolve([value, '2'])
+    })
+  }).then(value => {
+    console.log(value);
+    return new Promise((resolve, reject) => {
+      value.push('3')
+      resolve(value)
+      console.log(value);
+    })
+  }).then(value => {
+    console.log(value);
+  })
+
+  // console.log(result); //返回的是Promise对象
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // 模拟一个耗时的网络请求
+  // function simulateNetworkRequest() {
+  //   return new Promise(resolve => {
+  //     setTimeout(() => {
+  //       resolve('网络请求完成');
+  //     }, 2000);
+  //   });
+  // }
+
+  // // 异步函数，执行网络请求和其他任务
+  // async function performTasks() {
+  //   console.log('开始执行任务');
+
+  //   // 发起网络请求并等待响应
+  //   const response = await simulateNetworkRequest();
+  //   console.log(response);
+
+  //   // 执行其他任务
+  //   console.log('执行其他任务');
+  // }
+
+  // // 调用异步函数
+  // performTasks();
+  // console.log('继续执行其他任务');
+</script>

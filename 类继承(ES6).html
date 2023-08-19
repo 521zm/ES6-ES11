@@ -1,0 +1,32 @@
+<script>
+  class Person {
+    constructor(name, age) {
+      this.name = name
+      this.age = age
+    }
+    call() {
+      console.log('call me');
+    }
+  }
+  class am extends Person {
+    constructor(name, age, height, width) {
+      super(name, age)
+      this.height = height
+      this.width = width
+    }
+    dance() {
+      console.log('i can dance');
+    }
+    play() {
+      console.log('i can play');
+    }
+    //重写父类方法
+    call() {
+      console.log('call call me');
+    }
+  }
+  // const zhangmeng = new Person('zhangmeng', '18')
+  const zhangdameng = new am('zhangmeng', '18', '100', '100')
+  console.log(zhangdameng);
+  zhangdameng.call()
+</script>

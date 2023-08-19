@@ -1,0 +1,15 @@
+<script>
+  const p = new Promise((resolve, reject) => {
+    // resolve('成功的值')
+    reject('失败了')
+  })
+  async function main() {
+    try {
+      const result = await p
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  main()
+</script>
